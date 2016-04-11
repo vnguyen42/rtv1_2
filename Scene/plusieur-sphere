@@ -1,0 +1,39 @@
+camera
+{
+    pos: 0 0 0
+    res: 1200 1000
+}
+
+light
+{
+    pos: -2.9 1.9 0
+    color: 255 255 255
+    dist: 20
+}
+
+object
+{
+	type: SPHERE
+    rayon: 0.5
+    pos: 0 0 3
+    color: 250 250 250
+	shiny: 0.5
+}
+
+object
+{
+    type: SPHERE
+    rayon: 0.5
+    pos: -1 0 3
+    color: 250 0 0
+	shiny: 0.5
+}
+
+object
+{
+    type: SPHERE
+    rayon: 0.5
+    pos: 1 0 3
+    color: 0 250 0
+	shiny: 0.5
+}
