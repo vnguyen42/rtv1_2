@@ -6,7 +6,7 @@
 /*   By: vnguyen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/11 16:30:12 by vnguyen           #+#    #+#             */
-/*   Updated: 2016/04/11 16:34:32 by vnguyen          ###   ########.fr       */
+/*   Updated: 2016/04/11 17:58:09 by vnguyen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ double		ft_normale2(t_ray *impact, t_object *object)
 				pow(object->d->y, 2) + pow(object->d->x, 2)));
 }
 
-double		ft_normale(t_ray *impact, t_impact *object)
+double		ft_normale(t_ray *impact, t_object *object)
 {
-	return (2 * (impact->->x - object->o->x) - (2 * object->d->x *
+	return (2 * (impact->o->x - object->o->x) - (2 * object->d->x *
 				(object->d->x * (impact->o->x - object->o->x) + object->d->z *
 				 (impact->o->z - object->o->z) + object->d->y * (impact->o->y
 					 - object->o->y))) / (pow(object->d->z, 2)

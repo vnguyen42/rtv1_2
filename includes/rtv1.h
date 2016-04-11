@@ -6,7 +6,7 @@
 /*   By: vnguyen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/11 16:00:11 by vnguyen           #+#    #+#             */
-/*   Updated: 2016/04/11 16:12:19 by vnguyen          ###   ########.fr       */
+/*   Updated: 2016/04/11 17:55:49 by vnguyen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ typedef struct	s_color
 	double b;
 }				t_color;
 
-typedef strcut	s_pos
+typedef struct	s_pos
 {
 	double x;
 	double y;
@@ -52,16 +52,17 @@ typedef strcut	s_pos
 
 typedef struct	s_object
 {
-	int	type;
-	double dist;
-	t_color *color;
-	t_pos *d;
-	double rad;
-	double h;
-	double shiny;
-	int mirror;
-	struct s_object *next;
-}				t_object;
+	int				type;
+	double			dist;
+	t_color			*color;
+	t_pos			*o;
+	t_pos			*d;
+	double			rad;
+	double			h;
+	double			shiny;
+	int				mirror;
+	struct s_object	*next;
+}					t_object;
 
 typedef struct	s_ray
 {
@@ -69,12 +70,20 @@ typedef struct	s_ray
 	t_pos	*d;
 }			t_ray;
 
+typedef	struct	s_light
+{
+	t_pos	*o;
+	t_color	*color;
+	double dist;
+	struct s_light *next;
+}			t_light;
+
 typedef struct s_cam
 {
 	t_pos *pos;
 	t_pos *h_vect;
 	t_pos *r_vect;
-	t_post *vect;
+	t_pos *vect;
 	double			dist;
 	double			w;
 	double			h;

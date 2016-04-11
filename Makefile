@@ -6,12 +6,12 @@
 #    By: vnguyen <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/04/11 15:51:01 by vnguyen           #+#    #+#              #
-#    Updated: 2016/04/11 16:29:54 by vnguyen          ###   ########.fr        #
+#    Updated: 2016/04/11 18:02:34 by vnguyen          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = rtv1
-LIB_NAME = Libft/libft.a
+LIB_NAME = libft/libft.a
 INC_DIR = includes
 SRC_DIR = src
 OBJ_DIR = obj
@@ -20,7 +20,7 @@ SRCS = src/main.c src/ft_parse_tools.c src/ft_parser.c src/ft_draw.c src/ft_norm
 
 OBJS = $(SRCS:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 
-IFLAGS = -I $(INC_DIR) -I Libft
+IFLAGS = -I $(INC_DIR) -I libft
 FLAGS = -Wall -Wextra -Werror
 
 CC = gcc $(FLAGS)
@@ -30,7 +30,7 @@ RM = /bin/rm -f
 all: $(LIB_NAME) $(NAME)
 
 $(LIB_NAME) :
-	@make -C Libft re
+	@make -C libft re
 
 $(NAME) : $(OBJS)
 	@echo "Make Objectfs :\033[1;32m DONE \033[m"
@@ -42,12 +42,12 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 
 clean:
 	@$(RM) $(OBJS)
-	@make -C Libft clean
+	@make -C libft clean
 	@echo "MAke clean DONE"
 
 fclean : clean
 	@$(RM) $(NAME)
-	@make -C Libft fclean
+	@make -C libft fclean
 	@echo "MAke fclean done"
 
 re: fclean all
