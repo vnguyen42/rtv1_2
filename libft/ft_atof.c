@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vnguyen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/04/11 16:43:03 by vnguyen           #+#    #+#             */
-/*   Updated: 2016/04/11 16:43:06 by vnguyen          ###   ########.fr       */
+/*   Created: 2016/04/11 18:06:31 by vnguyen           #+#    #+#             */
+/*   Updated: 2016/04/11 18:06:55 by vnguyen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,4 @@ double	ft_atof(char *str)
 		while ('0' <= *str && *str <= '9')
 			value += (*str++ - '0') / (i *= 10);
 	return (sign == 1 && value > 0 ? -value : value);
-
+}

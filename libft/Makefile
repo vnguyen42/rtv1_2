@@ -6,7 +6,7 @@
 #    By: vnguyen <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/25 17:12:41 by vnguyen            #+#    #+#              #
-#    Updated: 2016/04/11 18:00:21 by vnguyen          ###   ########.fr        #
+#    Updated: 2016/04/11 18:22:13 by vnguyen          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ SRCS =ft_memchr.c ft_putnbr_fd.c ft_striter.c ft_strnew.c ft_atoi.c ft_memcmp.c\
 	ft_strncmp.c ft_toupper.c ft_memalloc.c ft_putendl_fd.c ft_strdup.c ft_strncpy.c\
 	ft_memccpy.c ft_putnbr.c ft_strequ.c ft_strnequ.c\
 	ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c\
-	get_next_line.c ft_itof.c
+	get_next_line.c ft_itof.c ft_atof.c ft_isblank.c ft_tablen.c str_digit.c
 
 OBJECTS =ft_memchr.o ft_putnbr_fd.o ft_striter.o ft_strnew.o ft_atoi.o ft_memcmp.o\
 	ft_putstr.o ft_striteri.o ft_strnstr.o ft_bzero.o ft_memcpy.o ft_putstr_fd.o\
@@ -32,7 +32,7 @@ OBJECTS =ft_memchr.o ft_putnbr_fd.o ft_striter.o ft_strnew.o ft_atoi.o ft_memcmp
 	ft_strncmp.o ft_toupper.o ft_memalloc.o ft_putendl_fd.o ft_strdup.o ft_strncpy.o\
 	ft_memccpy.o ft_putnbr.o ft_strequ.o ft_strnequ.o\
 	ft_lstnew.o ft_lstdelone.o ft_lstdel.o ft_lstadd.o ft_lstiter.o ft_lstmap.o\
-	get_next_line.o ft_itof.o
+	get_next_line.o ft_itof.o ft_atof.o ft_isblank.o ft_tablen.o str_digit.o
 
 NAME  = libft.a
 

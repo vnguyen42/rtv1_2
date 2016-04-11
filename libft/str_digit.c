@@ -6,11 +6,11 @@
 /*   By: vnguyen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/11 16:42:43 by vnguyen           #+#    #+#             */
-/*   Updated: 2016/04/11 16:42:46 by vnguyen          ###   ########.fr       */
+/*   Updated: 2016/04/11 18:23:09 by vnguyen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int	str_digit(char *str)
 {
@@ -35,4 +35,4 @@ int	str_digit(char *str)
 		i++;
 	}
 	return (0);
-
+}

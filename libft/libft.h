@@ -6,7 +6,7 @@
 /*   By: vnguyen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/14 17:17:30 by vnguyen           #+#    #+#             */
-/*   Updated: 2016/04/11 18:00:43 by vnguyen          ###   ########.fr       */
+/*   Updated: 2016/04/11 18:22:19 by vnguyen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,5 +88,6 @@ int				str_digit(char *str);
 int				ft_tablen(char **tab);
 int				get_next_line(int const fd, char **line);
 char			*ft_itof(int nbr);
+int				ft_isblank(char c);
 
 #endif
