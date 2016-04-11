@@ -6,7 +6,7 @@
 #    By: vnguyen <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/04/11 15:51:01 by vnguyen           #+#    #+#              #
-#    Updated: 2016/04/11 15:59:40 by vnguyen          ###   ########.fr        #
+#    Updated: 2016/04/11 16:14:35 by vnguyen          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ INC_DIR = includes
 SRC_DIR = src
 OBJ_DIR = obj
 
-SRCS = src/main.c src/parse_tools.c src/parser.c src/draw.c src/normal.c src/vector.c src/color.c src/error.c src/init.c src/touch_rotate.c src/draw_suite.c src/utile.c src/vector.c
+SRCS = src/main.c src/ft_parse_tools.c src/ft_parser.c src/ft_draw.c src/ft_normal.c src/ft_vector.c src/ft_color.c src/ft_error.c src/ft_init.c src/ft_touch_rotate.c src/ft_draw_suite.c src/ft_utile.c src/ft_vector.c
 
 OBJS = $(SRCS:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 
