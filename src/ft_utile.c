@@ -6,7 +6,7 @@
 /*   By: vnguyen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/11 16:35:05 by vnguyen           #+#    #+#             */
-/*   Updated: 2016/04/11 16:35:56 by vnguyen          ###   ########.fr       */
+/*   Updated: 2016/04/21 15:15:19 by vnguyen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,14 +43,14 @@ void		verife(t_object *tmp, t_ray *ray, double *min)
 double		calcule(t_ray *ray, t_object *cyl, double k)
 {
 	return (2 * (ray->d->x * (ray->o->x - cyl->o->x)
-				+ (ray->d->y) * (ray->o->y
-					- cyl->o->y) + ray->d->z * (ray->o->z - cyl->o->z))
+			+ (ray->d->y) * (ray->o->y
+			- cyl->o->y) + ray->d->z * (ray->o->z - cyl->o->z))
 			- (2 * (cyl->d->x * ray->d->x
-					+ cyl->d->y * ray->d->y + cyl->d->z * ray->d->z)
-				* (cyl->d->x * (ray->o->x - cyl->o->x) + cyl->d->y
-					* (ray->o->y - cyl->o->y) + cyl->d->z * (ray->o->z - cyl->o->z)) / k));
+			+ cyl->d->y * ray->d->y + cyl->d->z * ray->d->z)
+			* (cyl->d->x * (ray->o->x - cyl->o->x) + cyl->d->y
+			* (ray->o->y - cyl->o->y) + cyl->d->z * (ray->o->z
+			* -cyl->o->z)) / k));
 }
-
 
 t_object	*intersection(t_object *l_objects, t_ray *ray)
 {

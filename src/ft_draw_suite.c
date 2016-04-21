@@ -6,7 +6,7 @@
 /*   By: vnguyen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/11 16:15:59 by vnguyen           #+#    #+#             */
-/*   Updated: 2016/04/11 18:01:58 by vnguyen          ###   ########.fr       */
+/*   Updated: 2016/04/21 14:58:16 by vnguyen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,17 @@ void	ft_impact2(t_draw_suite *val)
 {
 	val->invlight = vectorscale(-1, val->lightray->d);
 	val->kdiff = vectordot(val->invlight, val->impact->d)
-		*MAX((val->curlight->dist - val->curobject->dist)
+		* MAX((val->curlight->dist - val->curobject->dist)
 				/ val->curlight->dist, 0);
 	if (val->kdiff >= 0)
 	{
-		update_color(val->kdiff *1, val->curlight->color,
+		update_color(val->kdiff * 1, val->curlight->color,
 				val->final_color, val->curobject->color);
 		vectornorm(val->reflectray);
 		val->kspec = vectordot(val->invlight, val->reflectray);
 		if (val->kspec >= 0)
 			update_color(pow(val->kspec, 20)
-					*MAX((val->curlight->dist -
+					* MAX((val->curlight->dist -
 							val->curobject->dist) / val->curlight->dist, 0)
 					* val->curobject->shiny, val->curlight->color,
 					val->final_color, val->curobject->color);

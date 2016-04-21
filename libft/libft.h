@@ -6,7 +6,7 @@
 /*   By: vnguyen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/14 17:17:30 by vnguyen           #+#    #+#             */
-/*   Updated: 2016/04/11 18:22:19 by vnguyen          ###   ########.fr       */
+/*   Updated: 2016/04/21 15:51:57 by vnguyen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <string.h>
 # include <fcntl.h>
 # define BUFF_SIZE 4096
+
 typedef struct	s_list
 {
 	void			*content;

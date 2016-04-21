@@ -6,7 +6,7 @@
 /*   By: vnguyen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/11 16:29:23 by vnguyen           #+#    #+#             */
-/*   Updated: 2016/04/11 16:29:45 by vnguyen          ###   ########.fr       */
+/*   Updated: 2016/04/21 15:01:35 by vnguyen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,11 @@ void	init_param(t_tool *t)
 	t->cam->r_vect = vectornew(1, 0, 0);
 	t->cam->upleft = malloc(sizeof(t_pos));
 	t->cam->upleft->x = t->cam->pos->x + t->cam->vect->x * t->cam->dist +
-		t->cam->h_vect->x * (t->cam->h / 2) - t->cam->r_vect->x * (t->cam->w / 2);
+	t->cam->h_vect->x * (t->cam->h / 2) - t->cam->r_vect->x * (t->cam->w / 2);
 	t->cam->upleft->y = t->cam->pos->y + t->cam->vect->y * t->cam->dist +
-		t->cam->h_vect->y * (t->cam->h / 2) - t->cam->r_vect->y * (t->cam->w / 2);
+	t->cam->h_vect->y * (t->cam->h / 2) - t->cam->r_vect->y * (t->cam->w / 2);
 	t->cam->upleft->z = t->cam->pos->z + t->cam->vect->z * t->cam->dist +
-		t->cam->h_vect->z * (t->cam->h / 2) - t->cam->r_vect->z * (t->cam->w / 2);
+	t->cam->h_vect->z * (t->cam->h / 2) - t->cam->r_vect->z * (t->cam->w / 2);
 }
 
 void	run_through(t_thread *thread)

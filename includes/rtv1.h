@@ -6,12 +6,12 @@
 /*   By: vnguyen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/11 16:00:11 by vnguyen           #+#    #+#             */
-/*   Updated: 2016/04/11 17:55:49 by vnguyen          ###   ########.fr       */
+/*   Updated: 2016/04/21 15:57:35 by vnguyen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef RTV1_H
-#define RTV1_H
+# define RTV1_H
 # include "mlx.h"
 # include <math.h>
 # include <fcntl.h>
@@ -26,31 +26,31 @@
 # define PLAN 3
 # define E -0.000001
 
-typedef struct	s_equation
+typedef struct		s_equation
 {
-	double	a;
-	double	b;
-	double	c;
-	double discr;
-	double t1;
-	double t0;
-}				t_equation;
+	double		a;
+	double		b;
+	double		c;
+	double		discr;
+	double		t1;
+	double		t0;
+}					t_equation;
 
-typedef struct	s_color
+typedef struct		s_color
 {
 	double r;
 	double g;
 	double b;
-}				t_color;
+}					t_color;
 
-typedef struct	s_pos
+typedef struct		s_pos
 {
 	double x;
 	double y;
 	double z;
-}				t_pos;
+}					t_pos;
 
-typedef struct	s_object
+typedef struct		s_object
 {
 	int				type;
 	double			dist;
@@ -64,53 +64,53 @@ typedef struct	s_object
 	struct s_object	*next;
 }					t_object;
 
-typedef struct	s_ray
+typedef struct		s_ray
 {
 	t_pos	*o;
 	t_pos	*d;
-}			t_ray;
+}					t_ray;
 
-typedef	struct	s_light
+typedef	struct		s_light
 {
-	t_pos	*o;
-	t_color	*color;
-	double dist;
-	struct s_light *next;
-}			t_light;
-
-typedef struct s_cam
-{
-	t_pos *pos;
-	t_pos *h_vect;
-	t_pos *r_vect;
-	t_pos *vect;
+	t_pos			*o;
+	t_color			*color;
 	double			dist;
-	double			w;
-	double			h;
-	t_pos			*upleft;
-	double			x_res;
-	double			y_res;
-	double			indent;
+	struct s_light	*next;
+}					t_light;
+
+typedef struct		s_cam
+{
+	t_pos		*pos;
+	t_pos		*h_vect;
+	t_pos		*r_vect;
+	t_pos		*vect;
+	double		dist;
+	double		w;
+	double		h;
+	t_pos		*upleft;
+	double		x_res;
+	double		y_res;
+	double		indent;
 }					t_cam;
 
 typedef struct		s_image
 {
-	int				endian;
-	int				size_line;
-	int				bpp;
-	char			*data;
+	int			endian;
+	int			size_line;
+	int			bpp;
+	char		*data;
 }					t_image;
 
 typedef struct		s_tool
 {
-	void			*mlx_ptr;
-	void			*mlx_win;
-	void			*mlx_img;
-	t_object		*l_objects;
-	t_light			*l_lights;
-	t_image			*image;
-	t_cam			*cam;
-	double			lumamb;
+	void		*mlx_ptr;
+	void		*mlx_win;
+	void		*mlx_img;
+	t_object	*l_objects;
+	t_light		*l_lights;
+	t_image		*image;
+	t_cam		*cam;
+	double		lumamb;
 }					t_tool;
 
 typedef struct		s_thread
@@ -191,4 +191,3 @@ void				verife(t_object *tmp, t_ray *ray, double *min);
 void				ft_impact(t_draw_suite *val, t_ray *ray, t_tool *t);
 
 #endif
-
